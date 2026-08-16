@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -12,334 +14,252 @@
     Arial,
     sans-serif;
 
-  color: #171717;
-  background: #f3f5ff;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  min-height: 100%;
-
+  color: #151515;
   background: #f3f5ff;
 }
 
 body {
   min-width: 320px;
-}
-
-button {
-  font-family: inherit;
-  border: 0;
-  cursor: pointer;
-}
-
-#app {
-  width: 100%;
-}
-
-
-/* =========================================
-   MAIN APP
-========================================= */
-
-.app {
-  width: 100%;
-  max-width: 430px;
   min-height: 100vh;
-
-  margin: 0 auto;
-
-  padding: 18px 14px 110px;
-
   background:
     radial-gradient(
-      circle at 50% -10%,
-      rgba(113, 92, 255, 0.08),
+      circle at 20% 0%,
+      rgba(110, 87, 255, 0.08),
       transparent 35%
     ),
     #f3f5ff;
 }
 
+button {
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
 
-/* =========================================
-   GREETING CARD
-========================================= */
-
-.greeting-card {
+.app-shell {
   width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 14px 14px 90px;
+}
 
-  min-height: 82px;
+/* Header */
+
+.top-card {
+  width: 100%;
+  min-height: 72px;
+  padding: 12px 13px;
 
   display: flex;
   align-items: center;
 
-  padding: 13px 14px;
-
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 18px;
 
-  background: #ffffff;
-
   box-shadow:
-    0 5px 18px rgba(42, 42, 80, 0.06);
+    0 5px 18px rgba(38, 47, 90, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.8);
 }
 
+.avatar {
+  width: 45px;
+  height: 45px;
 
-.profile-avatar {
-  width: 52px;
-  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   flex-shrink: 0;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   border-radius: 50%;
 
-  color: #ffffff;
+  background: linear-gradient(145deg, #276be8, #174fc8);
 
-  background:
-    linear-gradient(
-      145deg,
-      #315de8,
-      #4c75f4
-    );
-
-  font-size: 23px;
+  color: white;
+  font-size: 20px;
   font-weight: 700;
+
+  box-shadow: 0 4px 10px rgba(38, 91, 207, 0.25);
 }
 
-
-.greeting-content {
+.welcome {
+  margin-left: 11px;
   flex: 1;
-
-  margin-left: 12px;
 }
 
-
-.greeting-content h1 {
-  margin: 0;
-
-  font-size: 17px;
-  line-height: 1.2;
-
+.welcome h1 {
+  font-size: 15px;
+  line-height: 20px;
   font-weight: 750;
-
-  color: #171717;
 }
 
-
-.greeting-content p {
-  margin: 5px 0 0;
-
-  color: #687080;
-
+.welcome p {
+  margin-top: 1px;
+  color: #687083;
   font-size: 11px;
-  line-height: 1.2;
 }
 
-
-.header-arrow {
-  width: 28px;
+.chevron {
+  width: 30px;
   height: 40px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: #777d89;
 
   background: transparent;
 
-  font-size: 30px;
-  font-weight: 300;
+  color: #9aa2b2;
+  font-size: 28px;
 }
 
-
-/* =========================================
-   BALANCE CARD
-========================================= */
+/* Balance */
 
 .balance-card {
-  width: 100%;
+  margin-top: 10px;
+  padding: 18px 18px;
 
-  min-height: 132px;
-
-  margin-top: 12px;
-
-  padding: 20px 18px;
+  min-height: 105px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  border-radius: 19px;
-
-  color: #ffffff;
+  border-radius: 17px;
 
   background:
     linear-gradient(
-      115deg,
-      #3925d9 0%,
-      #5030e4 48%,
-      #7043ed 100%
+      135deg,
+      #4031d9 0%,
+      #5133dc 50%,
+      #7a4fe9 100%
     );
 
+  color: white;
+
   box-shadow:
-    0 9px 20px rgba(83, 59, 224, 0.22);
+    0 8px 18px rgba(74, 53, 211, 0.24);
 }
 
-
-.balance-info p {
-  margin: 0 0 4px;
-
+.balance-label {
+  display: block;
   font-size: 12px;
-
-  color: rgba(255, 255, 255, 0.92);
+  font-weight: 600;
+  opacity: 0.9;
 }
 
+.balance-amount {
+  margin-top: 3px;
 
-.balance-info h2 {
-  margin: 0;
-
-  font-size: 31px;
-  line-height: 1;
-
-  letter-spacing: -1px;
-
+  font-size: 30px;
+  line-height: 35px;
   font-weight: 800;
+  letter-spacing: -0.7px;
 }
 
-
-.wallet-large {
-  width: 58px;
-  height: 58px;
+.wallet-outline {
+  width: 46px;
+  height: 46px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-size: 36px;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
 
-  opacity: 0.95;
+  font-size: 27px;
+  color: white;
 }
 
-
-/* =========================================
-   STATISTICS
-========================================= */
+/* Stats */
 
 .stats-card {
-  width: 100%;
-
+  margin-top: 10px;
   min-height: 68px;
-
-  margin-top: 11px;
-
-  padding: 12px 5px;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
-  border-radius: 17px;
+  align-items: center;
 
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 14px;
 
-  box-shadow:
-    0 4px 15px rgba(42, 42, 80, 0.05);
+  box-shadow: 0 5px 17px rgba(36, 45, 85, 0.06);
 }
-
 
 .stat {
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
-
   text-align: center;
+  position: relative;
 }
 
+.stat:not(:last-child)::after {
+  content: "";
 
-.stat + .stat {
-  border-left: 1px solid #eeeeF4;
+  position: absolute;
+  right: 0;
+  top: 6px;
+
+  width: 1px;
+  height: 32px;
+
+  background: #e7e9f0;
 }
-
 
 .stat strong {
-  font-size: 17px;
+  display: block;
 
-  line-height: 1.15;
-
-  font-weight: 750;
-
-  color: #171717;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 800;
 }
-
 
 .stat span {
+  display: block;
+
   margin-top: 2px;
 
+  color: #7d8492;
   font-size: 9px;
-
-  color: #777d89;
+  line-height: 12px;
 }
 
-
-/* =========================================
-   ACTION GRID
-========================================= */
+/* Action Grid */
 
 .action-grid {
-  width: 100%;
-
   margin-top: 10px;
 
   display: grid;
-
   grid-template-columns: repeat(2, 1fr);
 
-  gap: 9px;
+  gap: 8px;
 }
 
-
 .action-card {
-  min-height: 62px;
+  min-height: 67px;
+  padding: 10px 9px;
 
   display: flex;
   align-items: center;
 
-  padding: 9px;
+  text-align: left;
+
+  background: rgba(255, 255, 255, 0.96);
 
   border-radius: 13px;
 
-  background: #ffffff;
-
-  box-shadow:
-    0 4px 13px rgba(42, 42, 80, 0.055);
-
-  text-align: left;
+  box-shadow: 0 5px 15px rgba(38, 47, 90, 0.055);
 
   transition:
     transform 0.15s ease,
     box-shadow 0.15s ease;
 }
 
-
 .action-card:active {
   transform: scale(0.97);
-
-  box-shadow:
-    0 2px 8px rgba(42, 42, 80, 0.08);
 }
 
-
 .action-icon {
-  width: 35px;
-  height: 35px;
+  width: 39px;
+  height: 39px;
 
   flex-shrink: 0;
 
@@ -347,278 +267,199 @@ button {
   align-items: center;
   justify-content: center;
 
-  margin-right: 9px;
+  border-radius: 50%;
 
-  border-radius: 10px;
-
-  font-size: 19px;
-
+  font-size: 20px;
   font-weight: 700;
 }
 
-
-.action-card span {
-  color: #202020;
-
-  font-size: 11px;
-
-  font-weight: 650;
-}
-
-
-/* Icons */
-
 .telegram {
   color: #ffffff;
-  background: #229ed9;
+  background: #2997e9;
 }
 
-
-.history {
-  color: #193b78;
-  background: #eef3ff;
-
-  font-size: 25px;
+.clock {
+  color: #24365c;
+  background: #eef2fb;
+  font-size: 26px;
 }
-
 
 .tasks {
   color: #ffffff;
-  background: #2d68dd;
-
-  font-size: 22px;
+  background: #3672d9;
 }
 
-
-.referral {
-  color: #1b5aa8;
-  background: #eaf1ff;
-
+.people {
+  background: #eaf5ff;
   font-size: 19px;
 }
 
-
-.withdraw {
-  background: #fff4dc;
-
-  font-size: 20px;
+.money {
+  background: #fff1cc;
+  color: #d07a00;
+  font-size: 19px;
 }
-
 
 .help {
-  color: #ffffff;
-  background: #2869da;
-
-  border-radius: 50%;
-
-  font-size: 21px;
+  background: #eaf2ff;
+  color: #2869c8;
 }
 
+.action-card span {
+  margin-left: 9px;
 
-/* =========================================
-   REFERRAL BANNER
-========================================= */
+  font-size: 11px;
+  font-weight: 700;
 
-.referral-banner {
+  color: #242631;
+}
+
+/* Referral */
+
+.referral-card {
   width: 100%;
 
-  min-height: 62px;
-
   margin-top: 10px;
+  padding: 11px 12px;
 
-  padding: 10px 11px;
+  min-height: 64px;
 
   display: flex;
   align-items: center;
+
+  text-align: left;
 
   border-radius: 14px;
 
   background:
     linear-gradient(
       100deg,
-      #f0eaff,
-      #eee8ff
+      #f1eaff,
+      #f8f1ff
     );
 
-  text-align: left;
+  box-shadow: 0 5px 15px rgba(53, 41, 100, 0.06);
 }
 
-
-.gift-icon {
-  width: 40px;
-
-  flex-shrink: 0;
+.gift {
+  width: 38px;
+  height: 38px;
 
   display: flex;
+  align-items: center;
   justify-content: center;
 
-  font-size: 28px;
+  font-size: 25px;
 }
 
-
-.referral-text {
+.referral-content {
   flex: 1;
-
-  display: flex;
-  flex-direction: column;
-
-  margin-left: 5px;
+  margin-left: 7px;
 }
 
+.referral-content strong {
+  display: block;
 
-.referral-text strong {
+  color: #30276a;
+
   font-size: 11px;
-
-  line-height: 1.25;
-
-  color: #22202b;
+  line-height: 15px;
 }
 
+.referral-content span {
+  display: block;
 
-.referral-text span {
-  margin-top: 2px;
+  margin-top: 1px;
 
-  font-size: 10px;
+  color: #78718f;
 
-  color: #697080;
+  font-size: 9px;
 }
-
 
 .referral-arrow {
-  padding-right: 3px;
-
-  color: #4b35dc;
-
-  font-size: 26px;
+  color: #4938c9;
+  font-size: 25px;
 }
 
+/* Bottom Navigation */
 
-/* =========================================
-   BOTTOM NAVIGATION
-========================================= */
-
-.bottom-navigation {
+.bottom-nav {
   position: fixed;
 
-  z-index: 100;
-
   left: 50%;
-  bottom: 8px;
-
-  width: calc(100% - 20px);
-  max-width: 410px;
+  bottom: 0;
 
   transform: translateX(-50%);
+
+  width: min(100%, 430px);
+
+  padding:
+    7px 18px
+    calc(7px + env(safe-area-inset-bottom));
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
-  padding: 7px 5px;
-
-  border-radius: 17px;
-
   background: rgba(255, 255, 255, 0.97);
 
-  box-shadow:
-    0 6px 25px rgba(38, 39, 72, 0.12);
+  border-top: 1px solid #e5e7ee;
 
-  backdrop-filter: blur(15px);
+  box-shadow: 0 -5px 20px rgba(32, 40, 80, 0.07);
+
+  z-index: 100;
 }
 
-
-.bottom-item {
-  min-height: 45px;
+.nav-item {
+  background: transparent;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 
-  gap: 2px;
-
-  color: #777e8a;
-
-  background: transparent;
-
-  border-radius: 12px;
+  color: #858b9b;
 }
 
-
-.bottom-icon {
-  height: 20px;
+.nav-item div {
+  width: 29px;
+  height: 29px;
 
   display: flex;
   align-items: center;
+  justify-content: center;
 
-  font-size: 19px;
+  border-radius: 9px;
 
-  line-height: 1;
+  font-size: 18px;
 }
 
+.nav-item span {
+  margin-top: 1px;
 
-.bottom-item span {
   font-size: 9px;
-
-  font-weight: 600;
+  font-weight: 650;
 }
 
-
-.bottom-item.active {
-  color: #4a32df;
+.nav-item.active {
+  color: #4a35d4;
 }
 
-
-.bottom-item.active .bottom-icon {
-  font-weight: 800;
+.nav-item.active div {
+  background: #eeeaff;
 }
 
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
+/* Mobile */
 
 @media (max-width: 360px) {
-
-  .app {
+  .app-shell {
     padding-left: 10px;
     padding-right: 10px;
   }
 
-  .greeting-card {
-    min-height: 76px;
-  }
-
-  .profile-avatar {
-    width: 46px;
-    height: 46px;
-
-    font-size: 20px;
-  }
-
-  .greeting-content h1 {
-    font-size: 15px;
-  }
-
-  .balance-card {
-    min-height: 125px;
-
-    padding: 18px 16px;
-  }
-
-  .balance-info h2 {
-    font-size: 28px;
-  }
-
-  .wallet-large {
-    font-size: 30px;
-  }
-
-  .action-card {
-    min-height: 58px;
+  .balance-amount {
+    font-size: 27px;
   }
 
   .action-card span {
     font-size: 10px;
   }
-
 }

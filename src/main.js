@@ -5,18 +5,13 @@ const tg = window.Telegram?.WebApp;
 if (tg) {
   tg.ready();
   tg.expand();
-
-  console.log('Telegram Mini App connected');
-  console.log('Telegram version:', tg.version);
-  console.log('Telegram platform:', tg.platform);
-  console.log('Telegram user:', tg.initDataUnsafe?.user);
 }
 
+const app = document.querySelector('#app');
 
-document.querySelector('#app').innerHTML = `
+app.innerHTML = `
   <main class="app">
 
-    <!-- Greeting -->
     <section class="greeting-card">
       <div class="profile-avatar">A</div>
 
@@ -24,30 +19,21 @@ document.querySelector('#app').innerHTML = `
         <h1>Hello, Amaan 👋</h1>
         <p>Keep engaging. Keep earning!</p>
       </div>
-
-      <button class="header-arrow">›</button>
     </section>
 
-
-    <!-- Balance -->
     <section class="balance-card">
-      <div class="balance-info">
+      <div>
         <p>Your Balance</p>
         <h2>₹12.40</h2>
       </div>
 
-      <div class="wallet-large">
-        💼
-      </div>
+      <div class="wallet-icon">₹</div>
     </section>
 
-
-    <!-- Statistics -->
     <section class="stats-card">
-
       <div class="stat">
         <strong>124</strong>
-        <span>Total Submissions</span>
+        <span>Total</span>
       </div>
 
       <div class="stat">
@@ -59,109 +45,73 @@ document.querySelector('#app').innerHTML = `
         <strong>26</strong>
         <span>Pending</span>
       </div>
-
     </section>
 
-
-    <!-- Quick Actions -->
     <section class="action-grid">
 
       <button class="action-card">
-        <div class="action-icon telegram">
-          ➤
-        </div>
-
+        <div class="action-icon">➤</div>
         <span>Submit Proof</span>
       </button>
 
-
       <button class="action-card">
-        <div class="action-icon history">
-          ◷
-        </div>
-
+        <div class="action-icon">◷</div>
         <span>History</span>
       </button>
 
-
       <button class="action-card">
-        <div class="action-icon tasks">
-          ☷
-        </div>
-
+        <div class="action-icon">☷</div>
         <span>My Tasks</span>
       </button>
 
-
       <button class="action-card">
-        <div class="action-icon referral">
-          👥
-        </div>
-
+        <div class="action-icon">👥</div>
         <span>Refer & Earn</span>
       </button>
 
-
       <button class="action-card">
-        <div class="action-icon withdraw">
-          💼
-        </div>
-
+        <div class="action-icon">₹</div>
         <span>Withdraw</span>
       </button>
 
-
       <button class="action-card">
-        <div class="action-icon help">
-          ?
-        </div>
-
+        <div class="action-icon">?</div>
         <span>Help</span>
       </button>
 
     </section>
 
-
-    <!-- Referral -->
     <button class="referral-banner">
+      <span class="gift">🎁</span>
 
-      <div class="gift-icon">
-        🎁
-      </div>
-
-      <div class="referral-text">
+      <span class="referral-text">
         <strong>Refer your friends & earn extra!</strong>
-        <span>Get 10% of their earnings</span>
-      </div>
+        <small>Get 10% of their earnings</small>
+      </span>
 
-      <div class="referral-arrow">
-        ›
-      </div>
-
+      <span class="arrow">›</span>
     </button>
 
-
-    <!-- Bottom Navigation -->
     <nav class="bottom-navigation">
 
       <button class="bottom-item active">
-        <div class="bottom-icon">⌂</div>
-        <span>Home</span>
+        <span>⌂</span>
+        <small>Home</small>
       </button>
 
       <button class="bottom-item">
-        <div class="bottom-icon">☷</div>
-        <span>History</span>
+        <span>☷</span>
+        <small>History</small>
       </button>
 
       <button class="bottom-item">
-        <div class="bottom-icon">▣</div>
-        <span>Wallet</span>
+        <span>₹</span>
+        <small>Wallet</small>
       </button>
 
       <button class="bottom-item">
-        <div class="bottom-icon">●</div>
-        <span>Profile</span>
+        <span>●</span>
+        <small>Profile</small>
       </button>
 
     </nav>
